@@ -101,7 +101,7 @@ jobs:
         git config --global user.name "OpenWrt Builder"
         git config --global user.email "buster-openwrt@ovvo.uk"
         cd $OPENWRT_PATH/feeds/luci
-        wget  https://raw.githubusercontent.com/openwrt-ipq60xx/patches/7f539408883a80cd50285d5c7ad75ed2ac43c1bc/feeds/luci/0001-show-soc-status-on-luci.patch
+        wget https://raw.githubusercontent.com/openwrt-ipq60xx/patches/7f539408883a80cd50285d5c7ad75ed2ac43c1bc/feeds/luci/0001-show-soc-status-on-luci.patch
         git am 0001-show-soc-status-on-luci.patch
 
     - name: Load Custom Configuration

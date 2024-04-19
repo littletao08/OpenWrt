@@ -71,7 +71,6 @@ jobs:
 
     - name: Generate Variables
       run: |
-        #cp $CONFIG_FILE $OPENWRT_PATH/.config
         cd $OPENWRT_PATH
         cp default.config .config
         make defconfig > /dev/null 2>&1

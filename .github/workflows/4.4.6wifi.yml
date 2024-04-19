@@ -1,4 +1,4 @@
-name: IPQ60XX-6.6-WIFI
+name: 4.4.6wifi
 
 on:
   workflow_dispatch:

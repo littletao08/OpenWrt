@@ -104,10 +104,10 @@ jobs:
     #     wget https://raw.githubusercontent.com/openwrt-ipq60xx/patches/main/feeds/luci/0001-show-soc-status-on-luci.patch
     #     git am 0001-show-soc-status-on-luci.patch
   
-    - name: Load Custom Configuration
-      run: |
-        [ -e files ] && mv files $OPENWRT_PATH/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
+    # - name: Load Custom Configuration
+    #   run: |
+    #     [ -e files ] && mv files $OPENWRT_PATH/files
+    #     [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
 
     - name: Download DL Package
       run: |

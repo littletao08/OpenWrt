@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/Kurosaki-Senpai/IPQ6000-WIFI-USB3.git
   REPO_BRANCH: wifi
   CONFIG_FILE: configs/zn-m2-4.4.6.config
-  DIY_SCRIPT: diy-script.sh
+  DIY_SCRIPT: diy3.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
@@ -94,6 +94,7 @@ jobs:
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        bash $DIY_SCRIPT
 
     # - name: Apply patches   
     #   run: |

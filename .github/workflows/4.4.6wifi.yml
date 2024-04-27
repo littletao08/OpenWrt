@@ -6,7 +6,7 @@ on:
     - cron: 0 19 * * 5
 
 env:
-  REPO_URL: https://github.com/Kurosaki-Senpai/IPQ6000-WIFI-USB3.git
+  REPO_URL: https://github.com/littletao2008/IPQ6000-WIFI-USB3
   REPO_BRANCH: wifi
   CONFIG_FILE: configs/zn-m2-4.4.6.config
   DIY_SCRIPT: diy3.sh

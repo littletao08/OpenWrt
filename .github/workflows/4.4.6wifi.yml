@@ -94,7 +94,7 @@ jobs:
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        bash $DIY_SCRIPT
+        bash $OPENWRT_PATH/$DIY_SCRIPT
 
     # - name: Apply patches   
     #   run: |

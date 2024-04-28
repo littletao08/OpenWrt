@@ -92,10 +92,13 @@ jobs:
     
     - name: Install Feeds
       run: |
+        chmod +x $DIY_SCRIPT
         cd $OPENWRT_PATH
+        $GITHUB_WORKSPACE/$DIY_SCRIPT
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        bash $DIY_SCRIPT
+        
+        
 
     # - name: Apply patches   
     #   run: |
@@ -109,6 +112,8 @@ jobs:
       run: |
         [ -e files ] && mv files $OPENWRT_PATH/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
+    
+     
 
     - name: Download DL Package
       run: |

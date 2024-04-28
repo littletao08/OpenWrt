@@ -72,6 +72,7 @@ jobs:
     - name: Generate Variables
       run: |
         cp $CONFIG_FILE $OPENWRT_PATH/.config
+        cp $DIY_SCRIPT $OPENWRT_PATH/
         cd $OPENWRT_PATH
         make defconfig > /dev/null 2>&1
         SOURCE_REPO="$(echo $REPO_URL | awk -F '/' '{print $(NF)}')"
@@ -94,7 +95,7 @@ jobs:
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        bash $OPENWRT_PATH/$DIY_SCRIPT
+        bash $DIY_SCRIPT
 
     # - name: Apply patches   
     #   run: |
